@@ -96,15 +96,14 @@ body,
 }
 
 .scene p {
+  font-size: larger;
   padding-left: 1rem;
   padding-right: 1rem;
   color: black;
   text-shadow: 0 0 6px white;
 }
 
-[data-scene="4"] div {
-  font-size: xxx-large;
-}
+
 
 [data-scene="5"] img {
   display: block;
@@ -113,7 +112,7 @@ body,
   border: 5px solid white;
 }
 
-[data-scene="6"] {
+[data-scene="8"] {
   background: url("../img/background.jpg") no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -121,6 +120,7 @@ body,
   background-size: cover;
   margin: 0 auto 0 auto !important;
   height: 100vh !important;
+  background-color: rgba(0, 0, 0, 0.4)
 }
 
 #tooltip h3 {
