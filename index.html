@@ -94,13 +94,14 @@
   <article class="scene" data-scene="4">
       <h2>A Closer Look: Washington</h2>
       <h3> Hover over a County for more Info! </h3>
+      
       <p> The first state that we are going to examine for covid cases is Washington. Washington state implemented a series of measures to combat the spread of Covid-19, particularly in the early stages of the pandemic.
         Being one of the first states to experience an outbreak, a state of emergency was declared in Feburary of 2020 by Governer Jay Inslee. 
         This quickly turned into a Stay-at-Home Order and closure of all non-essential buisnesses. This was combined with indoor and outdoor mask mandates
         to try and help ease the spread. Washington continued this lock-down for a longer time until Phased Reopening was introduced along with contact tracing and 
         early vaccination mandates to help reduce the spread.
       </p>
-    
+
   </article>
     <article class="scene" data-scene="5">
       <h2>A Closer Look: Georgia</h2>
@@ -236,15 +237,26 @@
         };
 
         countyLayer = {
-          'id': 'county-points',
-          'type': 'fill',
-          'source': 'county-src',
-          'minzoom': 3,
-          'paint': {
-            'fill-color': 'red',
-            'fill-opacity': 0.5
-          }
-        };
+  'id': 'county-points',
+  'type': 'fill',
+  'source': 'county-src',
+  'minzoom': 3,
+  'paint': {
+    'fill-color': [
+      'interpolate',
+      ['linear'],
+      ['get', 'cases'],
+      2500, '#fc9272',
+      5000, '#fb6a4a',
+      10000, '#ef3b2c',
+      20000, '#cb181d',
+      50000, '#a50f15',
+      60000, '#67000d'
+    ],
+    'fill-opacity': 0.5
+  }
+};
+
 
         // 9. Initialize the script panel
         scriptPanel
@@ -299,10 +311,10 @@
               pitch: 0,
               speed: 0.5
             });
-            //Relocate to Seattle
+            //Relocate
 
           } else if (index === 3) {
-            //Relocate to Portland
+            //Relocate
             map.flyTo({
               center: [-83.93, 27.33],
               zoom: 6,
@@ -437,47 +449,52 @@
 
       });
 
-      
-      
-      
       map.on('mousemove', ({ point }) => {
-        const features = map.queryRenderedFeatures(point, {
-            layers: ['state-polygons']
-        });
+  const countyFeatures = map.queryRenderedFeatures(point, {
+    layers: ['county-points']
+  });
 
-        if (features.length) {
-            const name = features[0].properties.name;
-            const cases = features[0].properties.cases;
+  const scene4 = document.querySelector('[data-scene="4"]');
+  const scene5 = document.querySelector('[data-scene="5"]');
+  const scene6 = document.querySelector('[data-scene="6"]');
+  const scene7 = document.querySelector('[data-scene="7"]');
 
-            // Display tooltip with county name and cases
-            document.getElementById('textid').innerHTML = `<h3>${name}</h3><p><strong><em>${cases}</strong> Covid-19 cases per State</em></p>`;
-        } else {
-            // Hide tooltip if not hovering over a county
-            document.getElementById('textid').innerHTML = '';
-        }
-    });
-      
-      
-      
-      
-      
-      map.on('mousemove', ({ point }) => {
-        const features = map.queryRenderedFeatures(point, {
-            layers: ['county-points']
-        });
+  if (countyFeatures.length) {
+    const county = countyFeatures[0].properties.county;
+    const cases = countyFeatures[0].properties.cases;
 
-        if (features.length) {
-            const county = features[0].properties.county;
-            const cases = features[0].properties.cases;
+    if (scene4) {
+      const hoverInfo = scene4.querySelector('h3');
+      hoverInfo.textContent = `${county} County: Total Cases ${cases}`;
+    }
 
-            // Display tooltip with county name and cases
-            document.getElementById('tooltip').innerHTML = `<h3>${county}</h3><p><strong><em>${cases}</strong> Covid-19 cases per county in the U.S.</em></p>`;
-        } else {
-            // Hide tooltip if not hovering over a county
-            document.getElementById('tooltip').innerHTML = '';
-        }
-    });
+    if (scene5) {
+      const hoverInfo = scene5.querySelector('h3');
+      hoverInfo.textContent = `${county} County: Total Cases ${cases}`;
+    }
 
+    if (scene6) {
+      const hoverInfo = scene6.querySelector('h3');
+      hoverInfo.textContent = `${county} County: Total Cases ${cases}`;
+    }
+
+    if (scene7) {
+      const hoverInfo = scene7.querySelector('h3');
+      hoverInfo.textContent = `${county} County: Total Cases ${cases}`;
+    }
+
+    document.getElementById('tooltip').innerHTML = `<h3>City Name: ${county}</h3><p><strong><em>${cases}</strong> cases in this county.</em></p>`;
+  } else {
+    // Hide tooltip if not hovering over any county layer
+    document.getElementById('textid').innerHTML = '';
+    document.getElementById('tooltip').innerHTML = '';
+  }
+});
+
+
+
+
+  
     };
 
     // 5 call the data loading function.
