@@ -1,514 +1,194 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="utf-8" />
-  <meta name="description" content="GeoNarrative Template" />
+  <meta name="description" content="COVID-19 Mapping in the U.S." />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
-  <title>GeoNarrative Template</title>
-  <!-- <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,500;1,400;1,500&display=swap" /> -->
-  <!-- <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/v2.8.1/mapbox-gl.css"> -->
-  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"> -->
+  <title>COVID-19 Mapping in the U.S.</title>
   <link rel="stylesheet" href="css/main.css">
   <script src="https://unpkg.com/scrollama"></script>
   <script src="https://api.mapbox.com/mapbox-gl-js/v2.8.1/mapbox-gl.js"></script>
 </head>
 
 <body>
-  <!-- loading a video cover page -->
   <section id="cover">
-    <!-- loading a video as the background -->
     <video class="fullscreen canvas-center" playsinline="" autoplay="" muted="" loop="">
-      <source src="assets/Covid.mp4" type="video/mp4">
+      <source src="assets/covid.mp4" type="video/mp4">
     </video>
     <div id="intro">
-      <h1>GEOG 458 Final Project</h1>
-      <h5>COVID-19 Mapping in the U.S.</h5>
-      <p>This storytelling map presents COVID-19 data across the United States, utilizing information sourced from the New York Times. The objective of this project is to analyze the varied responses of different states to the COVID-19 pandemic and their subsequent impact on the pandemic trends within each state. The selected states for in-depth examination include Washington, New York, Georgia, and Florida. Through this initiative, we aim to shed light on effective response strategies and preventive measures that can be adopted to mitigate the spread of future pandemics and safeguard lives.
+      <h1>GEOG 458 Final Project: COVID-19 Mapping in the U.S.</h1>
+      <h4>Winter 2024, Group AB4</h4>
+      <p>This storytelling map presents COVID-19 data across the United States, utilizing information sourced from the
+        New York Times. The objective of this project is to analyze the varied responses of different states to the
+        COVID-19 pandemic and their subsequent impact on the pandemic trends within each state. The selected states for
+        in-depth examination include Washington, New York, Georgia, and Florida. Through this initiative, we aim to shed
+        light on effective response strategies and preventive measures that can be adopted to mitigate the spread of
+        future pandemics and safeguard lives.
       </p>
-
       <div class="footnote">
-        <span> To access COVID-19 data click on NYT logo</span>
-        <a target="_blank" href="https://github.com/nytimes/covid-19-data"> <img src="img/NYT.jpg" width="50px"></a>
+        <span style="padding-right: 1rem;"> To access COVID-19 data click on NYT logo</span>
+        <a target="_blank" href="https://github.com/nytimes/covid-19-data"> <img src="img/nyt.jpg" width="50px"
+            alt="Data Source"></a>
       </div>
     </div>
   </section>
-  <!-- a geonarrative will have two major components, a storyboard and a script panel of a series of scenes/actions -->
   <section id="geonarrative">
-    <!-- a storymap can present differnt types of objects, like map, chart, diagram, etc. -->
     <div id="storyboard">
-      <!-- create the place holder element for map -->
       <div id="map"></div>
     </div>
-
     <article class="scene" data-scene="0" style="min-height: 40rem;">
-      <h2>Washington</h2>
-        <p>Overview </p>
-          <div style="font-size: xx-large;";>
-            <!-- loading bootstrap icons -->
-            <p><i class="bi bi-person"></i> <span>1,924,418 Total Cases</span>
-            </p>
-            <p><i class="bi bi-hospital"></i> <span>19.70 Deaths per 10k</span>
-            </p>
-          </div>
-          <img src="img/Washington_Graph.png" alt="Graph of Florida">
+      <h2>Washington Overview</h2>
+      <div style="font-size: xx-large;" ;>
+        <p><i class="bi bi-person"></i> <span>1,924,418 Total Cases</span>
+        </p>
+        <p><i class="bi bi-hospital"></i> <span>19.70 Deaths per 10k</span>
+        </p>
+      </div>
+      <img src="img/washington_graph.png" alt="Graph of Florida">
     </article>
     <article class="scene" data-scene="1" style="min-height: 40rem;">
-      <h2>New York</h2>
-        <div style="font-size: xx-large;";>
-          <!-- loading bootstrap icons -->
-          <p><i class="bi bi-person"></i> <span> 6,764,874 Total Cases</span>
-          </p>
-          <p><i class="bi bi-hospital"></i> <span> 40.48 Deaths per 10k</span>
-          </p>
-        </div>
-        <img src="img/NewYork_Graph.png" alt="Graph of Florida">
+      <h2>New York Overview</h2>
+      <div style="font-size: xx-large;" ;>
+        <p><i class="bi bi-person"></i> <span> 6,764,874 Total Cases</span>
+        </p>
+        <p><i class="bi bi-hospital"></i> <span> 40.48 Deaths per 10k</span>
+        </p>
+      </div>
+      <img src="img/newyork_graph.png" alt="Graph of Florida">
     </article>
     <article class="scene" data-scene="2" style="min-height: 40rem;">
-      <h2>Georgia</h2>
-        <div style="font-size: xx-large;";>
-          <!-- loading bootstrap icons -->
-          <p><i class="bi bi-person"></i> <span>2,972,781 Total Cases</span>
-          </p>
-          <p><i class="bi bi-hospital"></i> <span>36.92 Deaths per 10k</span>
-          </p>
-        </div>
-        <img src="img/Georgia_Graph.png" alt="Graph of Florida">
-  </article>
-  <article class="scene" data-scene="3" style="min-height: 40rem;">
-      <h2>Flordia</h2>
-      <div style="font-size: xx-large;";>
-        <!-- loading bootstrap icons -->
+      <h2>Georgia Overview</h2>
+      <div style="font-size: xx-large;" ;>
+        <p><i class="bi bi-person"></i> <span>2,972,781 Total Cases</span>
+        </p>
+        <p><i class="bi bi-hospital"></i> <span>36.92 Deaths per 10k</span>
+        </p>
+      </div>
+      <img src="img/georgia_graph.png" alt="Graph of Florida">
+    </article>
+    <article class="scene" data-scene="3" style="min-height: 40rem;">
+      <h2>Flordia Overview</h2>
+      <div style="font-size: xx-large;" ;>
         <p><i class="bi bi-person"></i> <span> 7,473,371 Total Cases</span>
         </p>
         <p><i class="bi bi-hospital"></i> <span> 38.16 Deaths per 10k</span>
         </p>
       </div>
-      <img src="img/Florida_Graph.png" alt="Graph of Florida">
+      <img src="img/florida_graph.png" alt="Graph of Florida">
     </article>
-    
-  <article class="scene" data-scene="4">
+    <article class="scene" data-scene="4">
       <h2>A Closer Look: Washington</h2>
       <h3> Hover over a County for more Info! </h3>
-      
-      <p>Washington State swiftly responded to the COVID-19 outbreak by implementing a comprehensive set of measures, particularly during the initial stages of the pandemic. As one of the earliest states to experience the outbreak, Governor Jay Inslee declared a state of emergency in February 2020. This declaration was followed by the enforcement of a Stay-at-Home Order, accompanied by the closure of non-essential businesses. Additionally, indoor and outdoor mask mandates were put into effect to mitigate the spread of the virus. Washington sustained these restrictions for an extended period until the introduction of a Phased Reopening plan, complemented by robust contact tracing efforts and the implementation of early vaccination mandates.</p>
-      Some key Washington COVID Measures:
-      <ul> 
+      <p>Washington State swiftly responded to the COVID-19 outbreak by implementing a comprehensive set of measures,
+        particularly during the initial stages of the pandemic. As one of the earliest states to experience the
+        outbreak, Governor Jay Inslee declared a state of emergency in February 2020. This declaration was followed by
+        the enforcement of a Stay-at-Home Order, accompanied by the closure of non-essential businesses. Additionally,
+        indoor and outdoor mask mandates were put into effect to mitigate the spread of the virus. Washington sustained
+        these restrictions for an extended period until the introduction of a Phased Reopening plan, complemented by
+        robust contact tracing efforts and the implementation of early vaccination mandates.</p>
+      <p>Some key Washington COVID Measures:</p>
+      <ul>
         <li>Declaration of a state of emergency and prompt implementation of a Stay-at-Home Order.</li>
         <li>Mandates for indoor and outdoor mask-wearing to curb transmission.</li>
-        <li>Introduction of a Phased Reopening plan, coupled with rigorous contact tracing and early vaccination mandates.</li>
+        <li>Introduction of a Phased Reopening plan, coupled with rigorous contact tracing and early vaccination
+          mandates.</li>
       </ul>
-  </article>
-  <article class="scene" data-scene="5">
-    <h2>A Closer Look: New York</h2>
-    <h3> Hover over a County for more Info! </h3>
-    <p>New York quickly emerged as one of the early epicenters of the COVID-19 pandemic, garnering national attention as hospitals became overwhelmed and medical shortages ensued. In response to this crisis, the governor implemented stringent lockdown measures akin to those of Washington, including stay-at-home orders, closure of businesses, and intensified social distancing guidelines. Given the high population density, the city established field hospitals and enlisted external healthcare aid to manage the surge in cases. The state's approach encompassed rigorous lockdown measures, coupled with widespread testing initiatives and a robust vaccination campaign, contributing to the containment of the virus spread across the city.</p>
-    Some key New York Covid Measures:
-    <ul>
-      <li>Implementation of strict lockdown measures, including stay-at-home orders and business closures.</li>
-      <li>Establishment of field hospitals and recruitment of external healthcare aid to cope with the surge in cases.</li>
-      <li>Aggressive testing efforts and a concerted push for vaccination to mitigate virus transmission.</li>
-    </ul>
-  </article>
+    </article>
+    <article class="scene" data-scene="5">
+      <h2>A Closer Look: New York</h2>
+      <h3> Hover over a County for more Info! </h3>
+      <p>New York quickly emerged as one of the early epicenters of the COVID-19 pandemic, garnering national attention
+        as hospitals became overwhelmed and medical shortages ensued. In response to this crisis, the governor
+        implemented stringent lockdown measures akin to those of Washington, including stay-at-home orders, closure of
+        businesses, and intensified social distancing guidelines. Given the high population density, the city
+        established field hospitals and enlisted external healthcare aid to manage the surge in cases. The state's
+        approach encompassed rigorous lockdown measures, coupled with widespread testing initiatives and a robust
+        vaccination campaign, contributing to the containment of the virus spread across the city.</p>
+      <p>Some key New York Covid Measures:</p>
+      <ul>
+        <li>Implementation of strict lockdown measures, including stay-at-home orders and business closures.</li>
+        <li>Establishment of field hospitals and recruitment of external healthcare aid to cope with the surge in cases.
+        </li>
+        <li>Aggressive testing efforts and a concerted push for vaccination to mitigate virus transmission.</li>
+      </ul>
+    </article>
 
-  <article class="scene" data-scene="6">
-    <h2>A Closer Look: Georgia</h2>
-    <h3> Hover over a County for more Info! </h3>
-    <p> Georgia adopted a relatively relaxed and less stringent approach compared to states such as Washington and New York. Instead of implementing stringent lockdown measures, the state pursued an earlier reopening strategy, which began in late April 2020. This approach allowed businesses and public gatherings to resume gradually. However, the decision to delay the enforcement of a mask mandate until July 2020 was perceived as a factor contributing to the increased transmission of the virus and a higher death toll. Despite concerns raised by public health experts and community members, Georgia's governor faced scrutiny for the state's approach, which some argued was not sufficiently proactive in preventing the escalation of COVID-19 cases and fatalities.
-    </p> 
-    Some Key Georgia Covid Measures:
-    <ul>
-      <li>Reopening strategy starting in late April 2020, being one of the earliest in the country.</li>
-      <li>Delay in enforcing a mask mandate until July 2020, later than many states.</li>
-      <li>Criticism directed towards the governor for a perceived lack of proactive measures in controlling COVID-19 outbreaks.</li>
-    </ul>
-  </article>
-  <article class="scene" data-scene="7">
-    <h2>A Closer Look: Florida </h2>
-    <h3> Hover over a County for more Info! </h3>
-    <p>Florida's policies and actions closely mirrored those of Georgia. They adopted a strategy of early reopening, permitting businesses and public spaces to resume operations in May 2020. Similarly, they delayed the implementation of a mask mandate until September 2020. The governor encountered significant criticism from those who believed that these measures were insufficient to prevent the spread of COVID-19 and mitigate the death toll.</p>
-    Some Key Florida Covid measures:
-    <ul>
-      <li>Adoption of an early reopening plan, allowing businesses and public spaces to resume operations in May 2020.</li>
-      <li>Delay in implementing a mask mandate until September 2020.</li>
-      <li>Facing criticism for perceived inadequacy of measures in preventing COVID-19 spread and limiting fatalities.</li>
-    </ul>
-  </article>
-  <article class="scene" data-scene="8">
-    <h2>Overall Trends and Findings</h2>
-    <p> The COVID-19 response strategies employed by Washington, New York, Georgia, and Florida showcased diverse approaches, resulting in varied outcomes regarding virus transmission and containment within each state. Washington and New York adopted proactive measures early in the pandemic, including prompt declarations of a state of emergency, stringent lockdowns, and the enforcement of mask mandates. In contrast, Georgia and Florida pursued a less strict approach, opting for earlier reopening and delayed implementation of mask mandates. </p>
-    <p> When looking at results of Covid in these states, we can see that Washington has by far the lowest amount of cases and depths per capita. This can be directly attributed to the stricter measures that were put in place by the governor, helping curb the spread across the state. However, when looking at the other three states we can see much higher states. For Florida and Georgia, this makes sense due to the less strict covid regulations and early reopening, allowing covid to run rampant across the state. However, we also see a high amount of cases and deaths for New York despite having similar Covid regulations as Washington. This reveals that despite the implementation of strict governmental measures, high covid rates can be attributed to several other factors that we must consider. Some of these factors include high population density and significant levels of international travel, as New York's status as an economic and cultural hub may have made it more susceptible to the rapid spread of the virus and subsequent high death toll. This high population density and elevated increase in cases overwhelm healthcare facilities despite efforts to increase hospital capacity, and may have contributed to higher mortality rates.
-    </p>
-    <p> In conclusion, the COVID-19 response strategies of Washington, New York, Georgia, and Florida illustrate the varied outcomes stemming from differing governmental approaches. Washington's proactive measures resulted in the lowest per capita cases and deaths, contrasting with Georgia and Florida's less strict policies, which led to heightened transmission rates. New York's high cases and deaths, despite stringent regulations, highlight the complex interplay of factors such as population density and international travel. Moving forward, these findings emphasize the importance of tailored and evidence-based interventions in mitigating the impact of pandemics.
-    </p>
-  </article>
-
+    <article class="scene" data-scene="6">
+      <h2>A Closer Look: Georgia</h2>
+      <h3> Hover over a County for more Info! </h3>
+      <p> Georgia adopted a relatively relaxed and less stringent approach compared to states such as Washington and New
+        York. Instead of implementing stringent lockdown measures, the state pursued an earlier reopening strategy,
+        which began in late April 2020. This approach allowed businesses and public gatherings to resume gradually.
+        However, the decision to delay the enforcement of a mask mandate until July 2020 was perceived as a factor
+        contributing to the increased transmission of the virus and a higher death toll. Despite concerns raised by
+        public health experts and community members, Georgia's governor faced scrutiny for the state's approach, which
+        some argued was not sufficiently proactive in preventing the escalation of COVID-19 cases and fatalities.
+      </p>
+      <p>Some Key Georgia Covid Measures:</p>
+      <ul>
+        <li>Reopening strategy starting in late April 2020, being one of the earliest in the country.</li>
+        <li>Delay in enforcing a mask mandate until July 2020, later than many states.</li>
+        <li>Criticism directed towards the governor for a perceived lack of proactive measures in controlling COVID-19
+          outbreaks.</li>
+      </ul>
+    </article>
+    <article class="scene" data-scene="7">
+      <h2>A Closer Look: Florida </h2>
+      <h3> Hover over a County for more Info! </h3>
+      <p>Florida's policies and actions closely mirrored those of Georgia. They adopted a strategy of early reopening,
+        permitting businesses and public spaces to resume operations in May 2020. Similarly, they delayed the
+        implementation of a mask mandate until September 2020. The governor encountered significant criticism from those
+        who believed that these measures were insufficient to prevent the spread of COVID-19 and mitigate the death
+        toll.</p>
+      <p>Some Key Florida Covid measures:</p>
+      <ul>
+        <li>Adoption of an early reopening plan, allowing businesses and public spaces to resume operations in May 2020.
+        </li>
+        <li>Delay in implementing a mask mandate until September 2020.</li>
+        <li>Facing criticism for perceived inadequacy of measures in preventing COVID-19 spread and limiting fatalities.
+        </li>
+      </ul>
+    </article>
+    <article class="scene" data-scene="8">
+      <h2>Overall Trends and Findings</h2>
+      <p> The COVID-19 response strategies employed by Washington, New York, Georgia, and Florida showcased diverse
+        approaches, resulting in varied outcomes regarding virus transmission and containment within each state.
+        Washington and New York adopted proactive measures early in the pandemic, including prompt declarations of a
+        state of emergency, stringent lockdowns, and the enforcement of mask mandates. In contrast, Georgia and Florida
+        pursued a less strict approach, opting for earlier reopening and delayed implementation of mask mandates. </p>
+      <p> When looking at results of Covid in these states, we can see that Washington has by far the lowest amount of
+        cases and depths per capita. This can be directly attributed to the stricter measures that were put in place by
+        the governor, helping curb the spread across the state. However, when looking at the other three states we can
+        see much higher states. For Florida and Georgia, this makes sense due to the less strict covid regulations and
+        early reopening, allowing covid to run rampant across the state. However, we also see a high amount of cases and
+        deaths for New York despite having similar Covid regulations as Washington. This reveals that despite the
+        implementation of strict governmental measures, high covid rates can be attributed to several other factors that
+        we must consider. Some of these factors include high population density and significant levels of international
+        travel, as New York's status as an economic and cultural hub may have made it more susceptible to the rapid
+        spread of the virus and subsequent high death toll. This high population density and elevated increase in cases
+        overwhelm healthcare facilities despite efforts to increase hospital capacity, and may have contributed to
+        higher mortality rates.
+      </p>
+    </article>
+    <article class="scene" data-scene="9">
+      <h2>Conclusion</h2>
+      <p> In conclusion, the COVID-19 response strategies of Washington, New York, Georgia, and Florida illustrate the
+        varied outcomes stemming from differing governmental approaches. Washington's proactive measures resulted in the
+        lowest per capita cases and deaths, contrasting with Georgia and Florida's less strict policies, which led to
+        heightened transmission rates. New York's high cases and deaths, despite stringent regulations, highlight the
+        complex interplay of factors such as population density and international travel. Moving forward, these findings
+        emphasize the importance of tailored and evidence-based interventions in mitigating the impact of pandemics.
+      </p>
   </section>
-
   <section id="footer">
     <h2>FOOTER</h2>
-    <p style="font-size: x-large;"> Image Sources: <a href="https://www.worldometers.info/coronavirus/country/us/"> World Meters</a> </p>
-
+    <p style="text-align: center; font-size: 0.8em; color: #666; margin-top: 10px;"> Image Sources: <a
+        href="https://www.worldometers.info/coronavirus/country/us/">
+        World Meters</a> </p>
   </section>
-
-
-  <script>
-    // 1. Declare the maps, script panels, and different thematic layers.
-    let map, scriptPanel = scrollama(), stateLayer, countyLayer;
-
-    // 2. Intialize the layout.
-   
-    history.scrollRestoration = "manual"; // make sure the geo-narrative will be scrolled to the cover page even after a page refresh.
-    window.scrollTo(0, 0); // scroll the geo-narrative to the coverpage
-    adjustStoryboardlSize(); // force a browser window resize.
-    window.addEventListener("resize", adjustStoryboardlSize); // // ask the browser window listen to the resize event, thereby force a viewport resize whenever adjusting the window size.
-
-    // 3. Define Generic window resize listener event
-    function adjustStoryboardlSize() {
-
-      const scenes = document.getElementsByClassName("scene");
-      const storyboard = document.getElementById("storyboard");
-
-      // 3.1 determine the height of each scene element
-      let sceneH = Math.floor(window.innerHeight * 0.75);
-      for (const scene of scenes) {
-        scene.style.height = sceneH + "px";
-      }
-      
-      // 3.2 determin the height of the storyboard.
-      let storyboardHeight = window.innerHeight;
-      let storyboardMarginTop = (window.innerHeight - storyboardHeight) / 2;
-
-      storyboard.style.height = storyboardHeight + "px";
-      storyboard.style.top = storyboardMarginTop + "px"
-
-      // 3.3 tell scrollama/script panel to update new element dimensions
-      scriptPanel.resize();
-    }
-
-    // 4. Initialize the mapbox
-    mapboxgl.accessToken =
-      'pk.eyJ1IjoiamFrb2J6aGFvIiwiYSI6ImNpcms2YWsyMzAwMmtmbG5icTFxZ3ZkdncifQ.P9MBej1xacybKcDN_jehvw'; // Assign the access token
-   
-    map = new mapboxgl.Map({
-      container: 'map', // container ID
-      style: 'mapbox://styles/mapbox/light-v10',
-      zoom: 4, // starting zoom
-      minZoom: 1,
-      maxZoom: 10,
-      center: [-98.93, 40.33], // starting center
-      scrollZoom: false,
-      boxZoom: false,
-      doubleClickZoom: false
-    });  // Declare the map object
-
-    // An alternative way to disable map zoom when using scroll
-    // map.scrollZoom.disable();
-
-
-    // 5. define the asynchronous function to load geojson data and then performs the dependent actions.
-    async function geojsonFetch() {
-
-      // 6 wait till the data of washington state and county are fully loaded.
-      let response, state, county;
-      response = await fetch("assets/state_data.geojson");
-      state = await response.json();
-      response = await fetch("assets/us-covid-2020-rates.json");
-      county = await response.json();
-
-
-      // 7. Trigger operations inside of the the ()=> {} funciton while loading the map.
-      map.on('load', () => {
-
-        // 8. add map source and declare layers.
-        map.addSource('county-src', {
-          type: 'geojson',
-          data: county
-        });
-
-        map.addSource('state-src', {
-          type: 'geojson',
-          data: state
-        });
-
-        stateLayer = {
-          'id': 'state-polygons',
-          'type': 'fill',
-          'source': 'state-src',
-          'minzoom': 5,
-          'paint': {
-            'fill-color': '#0080ff',
-            'fill-opacity': 0.5
-          }
-        };
-
-        countyLayer = {
-  'id': 'county-points',
-  'type': 'fill',
-  'source': 'county-src',
-  'minzoom': 3,
-  'paint': {
-    'fill-color': [
-      'interpolate',
-      ['linear'],
-      ['get', 'cases'],
-      2500, '#fc9272',
-      5000, '#fb6a4a',
-      10000, '#ef3b2c',
-      20000, '#cb181d',
-      50000, '#a50f15',
-      60000, '#67000d'
-    ],
-    'fill-opacity': 0.5
-  }
-};
-
-
-        // 9. Initialize the script panel
-        scriptPanel
-          .setup({
-            step: ".scene", // all the scenes.
-            offset: 0.33, // the location of the enter and exit trigger
-            debug: false // toggler on or off the debug mode.
-          })
-          .onStepEnter(handleSceneEnter)
-          .onStepExit(handleSceneExit);
-        
-        // 10. This function performs when a scene enters the storyboard
-        function handleSceneEnter(response) {
-
-          var index = response.index; // capture the id of the current scene. 
-
-          if (index === 0) { // When enter the first scene
-
-            map.flyTo({
-              center: [-123.93, 47.33],
-              zoom: 6,
-              pitch: 0,
-              speed: 0.5
-            }); // fly to a new location
-            
-            if (typeof (map.getSource('state-src')) == 'undefined') { //if the map source 'state-src' does not exist
-              map.addSource('state-src', {
-                type: 'geojson',
-                data: state
-              }); // reload the map source of 'state-src'
-            } else {
-              map.getSource('state-src').setData(state); // if the map source does not exist, relaod the data state to the pre-defined map source 'state-src'.
-            }
-
-            if (!map.getLayer("state-polygons")) { // if the map layer 'state-polygons' does not exit
-              map.addLayer(stateLayer);
-            }
-            document.getElementById("cover").style.visibility = "hidden"; // Hide the cover page
-
-          } else if (index === 1) { // When enter the second scene.
-            map.flyTo({
-              center: [-78.93, 43.33],
-              zoom: 6,
-              pitch: 0,
-              speed: 0.5
-            });
-
-          } else if (index === 2) {
-            map.flyTo({
-              center: [-84.93, 32.33],
-              zoom: 6,
-              pitch: 0,
-              speed: 0.5
-            });
-            //Relocate
-
-          } else if (index === 3) {
-            //Relocate
-            map.flyTo({
-              center: [-83.93, 27.33],
-              zoom: 6,
-              pitch: 0,
-              speed: 0.5
-            });
-             // change the base map
-          } else if (index === 4) {
-
-            map.flyTo({
-              center: [-123.93, 47.33],
-              zoom: 6,
-              pitch: 0,
-              speed: 0.5
-            }); 
-
-            if (typeof (map.getSource('county-src')) == 'undefined') {
-              map.addSource('county-src', {
-                type: 'geojson',
-                data: county
-              });
-            } else {
-              map.getSource('county-src').setData(county);
-
-            }
-
-            if (!map.getLayer("county-points")) {
-              map.addLayer(countyLayer);
-            }
-
-          }else if (index === 5) {
-            map.flyTo({
-              center: [-78.93, 43.33],
-              zoom: 6,
-              pitch: 0,
-              speed: 0.5
-            });
-
-          } else if (index === 6) {
-            
-            map.flyTo({
-              center: [-84.93, 32.33],
-              zoom: 6,
-              pitch: 0,
-              speed: 0.5
-            });
-            
-          } else if (index === 7) {
-            map.flyTo({
-              center: [-83.93, 27.33],
-              zoom: 6,
-              pitch: 0,
-              speed: 0.5
-            });
-
-            
-          } else if (index === 8) {
-            map.flyTo({
-              center: [-98.93, 40.33],
-              zoom: 4,
-              pitch: 0,
-              speed: 0.5
-            });
-            if (map.getLayer("county-points")) {
-                map.removeLayer('county-points');
-            }
-            
-          }
-        }
-
-        // 11. This function performs when a scene exists the storyboard
-        function handleSceneExit(response) {
-          var index = response.index;
-
-          if (index === 0) {
-
-            if (response.direction == 'down') { 
-              document.getElementById("cover").style.visibility = "hidden"; // when you scroll down, the cover page will be hided.
-            } else {
-              document.getElementById("cover").style.visibility = "visible"; // when you scroll up, the cover page will be shown.
-            }
-          } else if (index === 1) {
-        
-          } else if (index === 3) {
-            if (response.direction == 'down') { 
-              if (map.getLayer("state-polygons")) {
-                map.removeLayer('state-polygons');
-              } 
-            }
-              
-          } else if (index === 4) {
-            if (response.direction == 'up') { 
-              if (map.getLayer("county-points")) {
-                map.removeLayer('county-points');
-              }
-              if (typeof (map.getSource('state-src')) == 'undefined') { //if the map source 'state-src' does not exist
-              map.addSource('state-src', {
-                type: 'geojson',
-                data: state
-              }); // reload the map source of 'state-src'
-              } else {
-                map.getSource('state-src').setData(state); // if the map source does not exist, relaod the data state to the pre-defined map source 'state-src'.
-              }
-
-              if (!map.getLayer("state-polygons")) { // if the map layer 'state-polygons' does not exit
-                map.addLayer(stateLayer);
-              }
-            }              
-          } else if (index === 8) {
-            if (response.direction == 'up') { 
-              if (typeof (map.getSource('county-src')) == 'undefined') {
-              map.addSource('county-src', {
-                type: 'geojson',
-                data: county
-              });
-            } else {
-              map.getSource('county-src').setData(county);
-
-            }
-
-            if (!map.getLayer("county-points")) {
-              map.addLayer(countyLayer);
-            }
-
-
-            }
-          }
-
-
-
-        }
-
-
-      });
-
-      map.on('mousemove', ({ point }) => {
-  const countyFeatures = map.queryRenderedFeatures(point, {
-    layers: ['county-points']
-  });
-
-  const scene4 = document.querySelector('[data-scene="4"]');
-  const scene5 = document.querySelector('[data-scene="5"]');
-  const scene6 = document.querySelector('[data-scene="6"]');
-  const scene7 = document.querySelector('[data-scene="7"]');
-
-  if (countyFeatures.length) {
-    const county = countyFeatures[0].properties.county;
-    const cases = countyFeatures[0].properties.cases;
-
-    if (scene4) {
-      const hoverInfo = scene4.querySelector('h3');
-      hoverInfo.textContent = `${county} County: Total Cases ${cases}`;
-    }
-
-    if (scene5) {
-      const hoverInfo = scene5.querySelector('h3');
-      hoverInfo.textContent = `${county} County: Total Cases ${cases}`;
-    }
-
-    if (scene6) {
-      const hoverInfo = scene6.querySelector('h3');
-      hoverInfo.textContent = `${county} County: Total Cases ${cases}`;
-    }
-
-    if (scene7) {
-      const hoverInfo = scene7.querySelector('h3');
-      hoverInfo.textContent = `${county} County: Total Cases ${cases}`;
-    }
-
-    document.getElementById('tooltip').innerHTML = `<h3>City Name: ${county}</h3><p><strong><em>${cases}</strong> cases in this county.</em></p>`;
-  } else {
-    // Hide tooltip if not hovering over any county layer
-    document.getElementById('textid').innerHTML = '';
-    document.getElementById('tooltip').innerHTML = '';
-  }
-});
-
-
-
-
-  
-    };
-
-    // 5 call the data loading function.
-    geojsonFetch();
-  </script>
+  <script src="js/main.js"></script>
 </body>
 
 </html>
