@@ -110,7 +110,7 @@ body,
   -o-background-size: cover;
   background-size: cover;
   margin: 0 auto 0 auto !important;
-  height: 130vh !important;
+  min-height: 130vh !important;
   background-color: rgba(0, 0, 0, 0.4);
 
 
