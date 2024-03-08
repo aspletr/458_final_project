@@ -83,7 +83,7 @@ body,
   margin: 0 auto 0 4rem;
   padding: 0;
   color: #fff;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .scene:first-child {
@@ -99,18 +99,9 @@ body,
   font-size: larger;
   padding-left: 1rem;
   padding-right: 1rem;
-  color: black;
-  text-shadow: 0 0 6px white;
+  color: white;
 }
 
-
-
-[data-scene="5"] img {
-  display: block;
-  margin: 2rem auto 0 auto;
-  width: 90%;
-  border: 5px solid white;
-}
 
 [data-scene="8"] {
   background: url("../img/background.jpg") no-repeat center center;
@@ -119,8 +110,10 @@ body,
   -o-background-size: cover;
   background-size: cover;
   margin: 0 auto 0 auto !important;
-  height: 100vh !important;
-  background-color: rgba(0, 0, 0, 0.4)
+  height: 130vh !important;
+  background-color: rgba(0, 0, 0, 0.4);
+
+
 }
 
 #tooltip h3 {
@@ -131,4 +124,10 @@ body,
   color: black;
 }
 
+.scene img {
+  display: block;
+  margin: 2rem auto 0 auto;
+  width: 90%;
+  border: 5px solid white;
+}
   

@@ -26,8 +26,7 @@
     <div id="intro">
       <h1>GEOG 458 Final Project</h1>
       <h5>COVID-19 Mapping in the U.S.</h5>
-      <p>This storytelling map shows COVID-19 data across the U.S. using data from the Ney York Times
-        to get total COVID-19 counts for all states. We are going to examine the covid trends of 
+      <p>This storytelling map presents COVID-19 data across the United States, utilizing information sourced from the New York Times. The objective of this project is to analyze the varied responses of different states to the COVID-19 pandemic and their subsequent impact on the pandemic trends within each state. The selected states for in-depth examination include Washington, New York, Georgia, and Florida. Through this initiative, we aim to shed light on effective response strategies and preventive measures that can be adopted to mitigate the spread of future pandemics and safeguard lives.
       </p>
 
       <div class="footnote">
@@ -44,8 +43,8 @@
       <div id="map"></div>
     </div>
 
-    <article class="scene" data-scene="0">
-      <h2>First State: Washington</h2>
+    <article class="scene" data-scene="0" style="min-height: 40rem;">
+      <h2>Washington</h2>
         <p>Overview </p>
           <div style="font-size: xx-large;";>
             <!-- loading bootstrap icons -->
@@ -54,21 +53,10 @@
             <p><i class="bi bi-hospital"></i> <span>19.70 Deaths per 10k</span>
             </p>
           </div>
-      <p> Maybe include a picture of a graph </p>
+          <img src="img/Washington_Graph.png" alt="Graph of Florida">
     </article>
-    <article class="scene" data-scene="1">
-      <h2>Second State: Georgia</h2>
-        <div style="font-size: xx-large;";>
-          <!-- loading bootstrap icons -->
-          <p><i class="bi bi-person"></i> <span>2,972,781 Total Cases</span>
-          </p>
-          <p><i class="bi bi-hospital"></i> <span>36.92 Deaths per 10k</span>
-          </p>
-        </div>
-        <p> Maybe include a picture of a graph </p>
-  </article>
-    <article class="scene" data-scene="2">
-      <h2>Third State: New York</h2>
+    <article class="scene" data-scene="1" style="min-height: 40rem;">
+      <h2>New York</h2>
         <div style="font-size: xx-large;";>
           <!-- loading bootstrap icons -->
           <p><i class="bi bi-person"></i> <span> 6,764,874 Total Cases</span>
@@ -76,11 +64,21 @@
           <p><i class="bi bi-hospital"></i> <span> 40.48 Deaths per 10k</span>
           </p>
         </div>
-        <p> Maybe include a picture of a graph </p>
+        <img src="img/NewYork_Graph.png" alt="Graph of Florida">
     </article>
-  <article class="scene" data-scene="3">
-      <h2>Final State: Flordia</h2>
-
+    <article class="scene" data-scene="2" style="min-height: 40rem;">
+      <h2>Georgia</h2>
+        <div style="font-size: xx-large;";>
+          <!-- loading bootstrap icons -->
+          <p><i class="bi bi-person"></i> <span>2,972,781 Total Cases</span>
+          </p>
+          <p><i class="bi bi-hospital"></i> <span>36.92 Deaths per 10k</span>
+          </p>
+        </div>
+        <img src="img/Georgia_Graph.png" alt="Graph of Florida">
+  </article>
+  <article class="scene" data-scene="3" style="min-height: 40rem;">
+      <h2>Flordia</h2>
       <div style="font-size: xx-large;";>
         <!-- loading bootstrap icons -->
         <p><i class="bi bi-person"></i> <span> 7,473,371 Total Cases</span>
@@ -88,61 +86,71 @@
         <p><i class="bi bi-hospital"></i> <span> 38.16 Deaths per 10k</span>
         </p>
       </div>
-      <p> Maybe include a picture of a graph </p>
+      <img src="img/Florida_Graph.png" alt="Graph of Florida">
     </article>
     
   <article class="scene" data-scene="4">
       <h2>A Closer Look: Washington</h2>
       <h3> Hover over a County for more Info! </h3>
       
-      <p> The first state that we are going to examine for covid cases is Washington. Washington state implemented a series of measures to combat the spread of Covid-19, particularly in the early stages of the pandemic.
-        Being one of the first states to experience an outbreak, a state of emergency was declared in Feburary of 2020 by Governer Jay Inslee. 
-        This quickly turned into a Stay-at-Home Order and closure of all non-essential buisnesses. This was combined with indoor and outdoor mask mandates
-        to try and help ease the spread. Washington continued this lock-down for a longer time until Phased Reopening was introduced along with contact tracing and 
-        early vaccination mandates to help reduce the spread.
-      </p>
-
+      <p>Washington State swiftly responded to the COVID-19 outbreak by implementing a comprehensive set of measures, particularly during the initial stages of the pandemic. As one of the earliest states to experience the outbreak, Governor Jay Inslee declared a state of emergency in February 2020. This declaration was followed by the enforcement of a Stay-at-Home Order, accompanied by the closure of non-essential businesses. Additionally, indoor and outdoor mask mandates were put into effect to mitigate the spread of the virus. Washington sustained these restrictions for an extended period until the introduction of a Phased Reopening plan, complemented by robust contact tracing efforts and the implementation of early vaccination mandates.</p>
+      Some key Washington COVID Measures:
+      <ul> 
+        <li>Declaration of a state of emergency and prompt implementation of a Stay-at-Home Order.</li>
+        <li>Mandates for indoor and outdoor mask-wearing to curb transmission.</li>
+        <li>Introduction of a Phased Reopening plan, coupled with rigorous contact tracing and early vaccination mandates.</li>
+      </ul>
   </article>
-    <article class="scene" data-scene="5">
-      <h2>A Closer Look: Georgia</h2>
-      <h3> Hover over a County for more Info! </h3>
-      <p> New York had become one of the early epicenters of the pandemic and gained national attention as they quickly experienced overwhealmed hospitals and medical shortages.
-        As a reponse to this, the governer implemented strict lockdown measures similar to that of Washington, such as stay-at-home orders and closure of buisnesses and 
-        more intense social distancing guidelines. Due to the high concentration of people, the city had to set up field hospitals and recurit outside healthcare aid to help
-        curb the influx of cases the state was experiencing. The state saw intense lockdown measures combined with aggressive testing and a strong push for vaccination, helping
-        mitigate the spread of the virus throughout the city. 
-      </p>
-      
-    </article>
-    <article class="scene" data-scene="6">
-      <h2>A Closer Look: New York</h2>
-      <h3> Hover over a County for more Info! </h3>
-      <p> New York had become one of the early epicenters of the pandemic and gained national attention as they quickly experienced overwhealmed hospitals and medical shortages.
-        As a reponse to this, the governer implemented strict lockdown measures similar to that of Washington, such as stay-at-home orders and closure of buisnesses and 
-        more intense social distancing guidelines. Due to the high concentration of people, the city had to set up field hospitals and recurit outside healthcare aid to help
-        curb the influx of cases the state was experiencing. The state saw intense lockdown measures combined with aggressive testing and a strong push for vaccination, helping
-        mitigate the spread of the virus throughout the city. 
-      </p>
-    </article>
-    <article class="scene" data-scene="7">
-      <h2>A Closer Look: Florida </h2>
-      <h3> Hover over a County for more Info! </h3>
-      <p> Flordia's policies and actions featued those very similar to Georgia. They followed a similar plan or early reopening, allowing
-        buisnesses and public spaces to reopen in May of 2020. They also took their time when it came to a mask mandate, not opting to install
-        one until September of 2020. The governer faced harsh criticts that believed the actions and polocies were not strict enough in order to
-        help prevent the spread of covid and limit the death count.
-      </p>
-    </article>
-    <article class="scene" data-scene="8">
-      <h2>Overall Trends and Findings</h2>
-      <p> After looking at these 4 states with different measures and ideologies on dealing with the pandemic, it is clear that...
-      </p>
-    </article>
+  <article class="scene" data-scene="5">
+    <h2>A Closer Look: New York</h2>
+    <h3> Hover over a County for more Info! </h3>
+    <p>New York quickly emerged as one of the early epicenters of the COVID-19 pandemic, garnering national attention as hospitals became overwhelmed and medical shortages ensued. In response to this crisis, the governor implemented stringent lockdown measures akin to those of Washington, including stay-at-home orders, closure of businesses, and intensified social distancing guidelines. Given the high population density, the city established field hospitals and enlisted external healthcare aid to manage the surge in cases. The state's approach encompassed rigorous lockdown measures, coupled with widespread testing initiatives and a robust vaccination campaign, contributing to the containment of the virus spread across the city.</p>
+    Some key New York Covid Measures:
+    <ul>
+      <li>Implementation of strict lockdown measures, including stay-at-home orders and business closures.</li>
+      <li>Establishment of field hospitals and recruitment of external healthcare aid to cope with the surge in cases.</li>
+      <li>Aggressive testing efforts and a concerted push for vaccination to mitigate virus transmission.</li>
+    </ul>
+  </article>
+
+  <article class="scene" data-scene="6">
+    <h2>A Closer Look: Georgia</h2>
+    <h3> Hover over a County for more Info! </h3>
+    <p> Georgia adopted a relatively relaxed and less stringent approach compared to states such as Washington and New York. Instead of implementing stringent lockdown measures, the state pursued an earlier reopening strategy, which began in late April 2020. This approach allowed businesses and public gatherings to resume gradually. However, the decision to delay the enforcement of a mask mandate until July 2020 was perceived as a factor contributing to the increased transmission of the virus and a higher death toll. Despite concerns raised by public health experts and community members, Georgia's governor faced scrutiny for the state's approach, which some argued was not sufficiently proactive in preventing the escalation of COVID-19 cases and fatalities.
+    </p> 
+    Some Key Georgia Covid Measures:
+    <ul>
+      <li>Reopening strategy starting in late April 2020, being one of the earliest in the country.</li>
+      <li>Delay in enforcing a mask mandate until July 2020, later than many states.</li>
+      <li>Criticism directed towards the governor for a perceived lack of proactive measures in controlling COVID-19 outbreaks.</li>
+    </ul>
+  </article>
+  <article class="scene" data-scene="7">
+    <h2>A Closer Look: Florida </h2>
+    <h3> Hover over a County for more Info! </h3>
+    <p>Florida's policies and actions closely mirrored those of Georgia. They adopted a strategy of early reopening, permitting businesses and public spaces to resume operations in May 2020. Similarly, they delayed the implementation of a mask mandate until September 2020. The governor encountered significant criticism from those who believed that these measures were insufficient to prevent the spread of COVID-19 and mitigate the death toll.</p>
+    Some Key Florida Covid measures:
+    <ul>
+      <li>Adoption of an early reopening plan, allowing businesses and public spaces to resume operations in May 2020.</li>
+      <li>Delay in implementing a mask mandate until September 2020.</li>
+      <li>Facing criticism for perceived inadequacy of measures in preventing COVID-19 spread and limiting fatalities.</li>
+    </ul>
+  </article>
+  <article class="scene" data-scene="8">
+    <h2>Overall Trends and Findings</h2>
+    <p> The COVID-19 response strategies employed by Washington, New York, Georgia, and Florida showcased diverse approaches, resulting in varied outcomes regarding virus transmission and containment within each state. Washington and New York adopted proactive measures early in the pandemic, including prompt declarations of a state of emergency, stringent lockdowns, and the enforcement of mask mandates. In contrast, Georgia and Florida pursued a less strict approach, opting for earlier reopening and delayed implementation of mask mandates. </p>
+    <p> When looking at results of Covid in these states, we can see that Washington has by far the lowest amount of cases and depths per capita. This can be directly attributed to the stricter measures that were put in place by the governor, helping curb the spread across the state. However, when looking at the other three states we can see much higher states. For Florida and Georgia, this makes sense due to the less strict covid regulations and early reopening, allowing covid to run rampant across the state. However, we also see a high amount of cases and deaths for New York despite having similar Covid regulations as Washington. This reveals that despite the implementation of strict governmental measures, high covid rates can be attributed to several other factors that we must consider. Some of these factors include high population density and significant levels of international travel, as New York's status as an economic and cultural hub may have made it more susceptible to the rapid spread of the virus and subsequent high death toll. This high population density and elevated increase in cases overwhelm healthcare facilities despite efforts to increase hospital capacity, and may have contributed to higher mortality rates.
+    </p>
+    <p> In conclusion, the COVID-19 response strategies of Washington, New York, Georgia, and Florida illustrate the varied outcomes stemming from differing governmental approaches. Washington's proactive measures resulted in the lowest per capita cases and deaths, contrasting with Georgia and Florida's less strict policies, which led to heightened transmission rates. New York's high cases and deaths, despite stringent regulations, highlight the complex interplay of factors such as population density and international travel. Moving forward, these findings emphasize the importance of tailored and evidence-based interventions in mitigating the impact of pandemics.
+    </p>
+  </article>
 
   </section>
 
   <section id="footer">
     <h2>FOOTER</h2>
+    <p> Image Sources: <a href="https://www.worldometers.info/coronavirus/country/us/"> World Meters</a> </p>
+
   </section>
 
 
@@ -298,7 +306,7 @@
 
           } else if (index === 1) { // When enter the second scene.
             map.flyTo({
-              center: [-84.93, 32.33],
+              center: [-78.93, 43.33],
               zoom: 6,
               pitch: 0,
               speed: 0.5
@@ -306,7 +314,7 @@
 
           } else if (index === 2) {
             map.flyTo({
-              center: [-78.93, 43.33],
+              center: [-84.93, 32.33],
               zoom: 6,
               pitch: 0,
               speed: 0.5
@@ -347,15 +355,16 @@
 
           }else if (index === 5) {
             map.flyTo({
-              center: [-84.93, 32.33],
+              center: [-78.93, 43.33],
               zoom: 6,
               pitch: 0,
               speed: 0.5
             });
 
           } else if (index === 6) {
+            
             map.flyTo({
-              center: [-78.93, 43.33],
+              center: [-84.93, 32.33],
               zoom: 6,
               pitch: 0,
               speed: 0.5
