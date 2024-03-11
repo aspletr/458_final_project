@@ -120,6 +120,10 @@ h2 {
   padding-bottom: 1rem;
 }
 
+.scene ul {
+  font-size: x-large;
+}
+
 .scene h3 {
   padding-left: 1.5rem;
   padding-right: 1rem;
